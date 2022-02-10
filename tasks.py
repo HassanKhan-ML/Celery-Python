@@ -13,10 +13,12 @@ from celery import Celery
 from time import sleep
 
 # app = Celery('tasks', broker='redis://localhost:6379/0')
-app = Celery('tasks', backend= "db+sqlite:///db.sqlite3"
+app = Celery('tasks', backend= "db+sqlite:///db.sqlite3",
+             broker= 'redis://localhost:6379/0' ,
+
 )
 
-app.conf.broker_url = 'redis://localhost:6379/0'
+# app.conf.broker_url = '
 # app.conf.result_backend = 'redis://localhost:6379/0'
 # app.conf.broker_url = 'redis://localhost:6379/0'
 
