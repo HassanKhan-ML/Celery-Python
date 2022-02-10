@@ -1,7 +1,4 @@
-
-
 website = [
-
   'https://linkedcamp.com/',
   'https://mobylogix.com/',
   'https://arbisoft.com/',
@@ -14,9 +11,4 @@ website = [
   'https://reactjs.org/',
   'https://nodejs.org/en/',
   'https://dotnet.microsoft.com/en-us/',
-  '',
-  '',
-  '',
-  '',
-
 ]

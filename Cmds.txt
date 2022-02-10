@@ -1,0 +1,19 @@
+celery -A tasks worker --loglevel=INFO			
+celery -A proj worker -l INFO
+
+redis-server				
+
+from tasks import add				
+add.delay(4, 4)	result = add.delay(10)			
+result				
+result.status				
+result.get()				
+
+Flower	celery -A tasks flower		
+
+Celery shut Down	celery -A tasks control shutdown	
+				
+
+Sqlite Check data store in db or not
+
+				sqlite3 db.sqlite3 > .tables   >  select * from table_name;

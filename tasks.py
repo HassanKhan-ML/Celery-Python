@@ -18,7 +18,7 @@ app = Celery('tasks', backend= "db+sqlite:///db.sqlite3",
 
 )
 
-# app.conf.broker_url = '
+# app.conf.broker_url =  'redis://localhost:6379/0'
 # app.conf.result_backend = 'redis://localhost:6379/0'
 # app.conf.broker_url = 'redis://localhost:6379/0'
 
