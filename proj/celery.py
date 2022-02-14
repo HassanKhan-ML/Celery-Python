@@ -7,7 +7,8 @@ app = Celery('proj',
             broker= 'redis://localhost:6379/0',
             
 )
-# timezone = 'Europe/London'
+
+timezone='Asia/Karachi',
 
 # app.conf.timezone = 'Europe/London'
 
@@ -24,17 +25,17 @@ app = Celery('proj',
 #     task_routes = {
 #         'proj.tasks.add': {'queue': 'hipri'},  
 #     },
-#     timezone='Europe/London',
+#     timezone='Asia/Karachi',
 # )
 
-app.conf.beat_schedule = {
-    'add-every-5-seconds': {
-        'task': 'tasks.add',
-        'schedule': 30.0,
-        'args': (16, 16)
-    },
-}
-app.conf.timezone = 'UTC'
+# app.conf.beat_schedule = {
+#     'add-every-5-seconds': {
+#         'task': 'tasks.add',
+#         'schedule': 30.0,
+#         'args': (16, 16)
+#     },
+# }
+# app.conf.timezone = 'UTC'
 
 if __name__ == '__main__':
     app.start()
