@@ -13,7 +13,16 @@ Flower	celery -A tasks flower
 
 Celery shut Down	celery -A tasks control shutdown	
 				
-
+pip install db-name
 Sqlite Check data store in db or not
 
 				sqlite3 db.sqlite3 > .tables   >  select * from table_name;
+
+
+
+
+
+
+python3  monitor.py
+celery -A proj worker -l INFO
+result = add.apply_async((2, 2), countdown=3)
